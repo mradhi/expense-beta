@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ This file is part of the Expense project.
+  ~
+  ~ (c) Mohamed Radhi GUENNICHI <hello@guennichi.com> (https://www.guennichi.com)
+  ~
+  ~ For the full copyright and license information, please view the LICENSE
+  ~ file that was distributed with this source code.
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="guennichi_resource.resource_manager" class="Guennichi\ResourceBundle\Manager\ResourceManager">
+            <argument type="service" id="doctrine" on-invalid="ignore"/>
+        </service>
+
+        <service alias="guennichi_resource.resource_manager"
+                 id="Guennichi\ResourceBundle\Manager\ResourceManagerInterface"
+                 public="false"/>
+    </services>
+</container>
+

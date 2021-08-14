@@ -1,0 +1,3 @@
+guennichi_resource:
+    path: '/src/Model' # or '/src/Module/[!Resource]*/Model'
+    namespace: App
